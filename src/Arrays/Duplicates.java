@@ -24,6 +24,8 @@ public class Duplicates {
 			if(!flag)
 				temp[j++] = arr[i];
 		}
+		int s = n - j;
+		System.out.println(s);
 		int[] u = Arrays.copyOf(temp, j);
 		System.out.println(Arrays.toString(u));
 		
