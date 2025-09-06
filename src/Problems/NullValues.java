@@ -1,14 +1,19 @@
 package Problems;
 import java.util.*;
-
+class demo{
+	demo(){
+		
+	}
+	
+}
 public class NullValues {
     
 
     public static void main(String[] args) {
-        HashSet<Object> set = new HashSet<>();
-        set.add(null);
-        set.add("null");
-        System.out.println(set);
+        HashMap  hs = new HashMap();
+        hs.put(new demo(),'A');
+        hs.put(new demo(),'B');
+        System.out.println(hs);
 
       
         
