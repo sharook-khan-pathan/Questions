@@ -2,7 +2,7 @@ package JDBC;
 import java.util.Scanner;
 import java.sql.*;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.sql.Statement;
 public class DML {
 	public static void main(String args[]) {
 		int id = 0;
@@ -31,9 +31,21 @@ public class DML {
 //			String query = "update student set marks = 90 where sid = 1";
 //			Statement stmt = conn.createStatement();
 //			stmt.executeUpdate(query);
+			
+//			System.out.println("Enter student id to delete:");
+//			id = sc.nextInt();
+//			String query = "delete from student where sid = " + id ;
+//			Statement stmt = conn.createStatement();
+//			stmt.execute(query);
+//			System.out.println("Deleted");
+			
+			Statement stmt = conn.createStatement();
+			stmt.addBatch("INSERT INTO student VALUES (101, 85)");
+	        stmt.addBatch("INSERT INTO student VALUES (102, 90)");
+	        stmt.addBatch("UPDATE student SET marks=95 WHERE sid=2");
 			 
-			
-			
+	        int[] results = stmt.executeBatch();
+	        System.out.println("Batch executed successfully!");
 			
 		}
 		catch(Exception e) {
