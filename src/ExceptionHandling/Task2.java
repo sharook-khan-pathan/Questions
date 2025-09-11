@@ -11,7 +11,8 @@ public class Task2 {
 			int agenum = Integer.parseInt(age);
 		}
 		catch(NumberFormatException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			System.out.println("Enter valid number");
 		}
 		
 	}
